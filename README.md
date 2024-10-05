@@ -64,14 +64,14 @@ http://localhost:8000/
 - base - Main web development
   - api - API settings (Our website currently does not support RESTful)
   - migrations - Update the database
-  - template - To override the front-end componenets in the folder `templates` in the main directory
+  - templates - To override the front-end componenets in the folder `templates` in the main directory
   - models.py - Database settings
   - forms.py - To override the default form format of Django 
   - admin.py - Settings of the backend monitor system
   - urls.py - Set up valid URL and the corresponding view functions
   - views.py - Website core logic implementation
 - pace - Backend settings
-- template - Web templates to be overridden by files in base/template
+- templates - Web templates to be overridden by files in base/template
 - static - Include static resources, such as images, audio, .css, .js, fonts
 ...
 
