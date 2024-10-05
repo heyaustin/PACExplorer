@@ -29,7 +29,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 0;
 }
 
 .group label {
@@ -60,4 +60,24 @@
     background: white;
     min-width: 350px;
     flex: 3;
+}
+
+.btn-left {
+    flex: 1;
+    min-width: 300px;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.minw300 {
+    min-width: 300px !important;
+}
+
+.minw100 {
+    min-width: 100px !important;
 }

@@ -10,7 +10,7 @@
   <form style="max-width:400px" class="signup" id="signup_form" method="post" action="{% url 'socialaccount_signup' %}">
     {% csrf_token %}
     <div class="mb-3">
-      <label for="floatingInput">Email(電子郵件)</label>
+      <label for="floatingInput">Email</label>
       <input type="email" name="email" class="form-control" id="floatingInput" required>
     </div>
     {% comment '#TODO這個功能還未完工，需要覆寫django allauth的signup class' %}

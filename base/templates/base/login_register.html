@@ -23,25 +23,25 @@
     {% csrf_token %}
     <div class="form-floating mb-3">
       <input type="text" class="form-control" id="floatingInput" name="nickname">
-      <label for="floatingInput">使用者暱稱</label>
+      <label for="floatingInput">Nickname</label>
     </div>
     <div class="form-floating mb-3">
       <input type="email" class="form-control" id="floatingInput" name="email">
-      <label for="floatingInput">Email(電子郵件)</label>
+      <label for="floatingInput">Email</label>
     </div>
     <div class="form-floating mb-3">
       <input type="password" class="form-control" id="floatingPassword" name="password1">
-      <label for="floatingPassword">密碼</label>
+      <label for="floatingPassword">Password</label>
     </div>
     <div class="form-floating mb-3">
       <input type="password" class="form-control" id="floatingPassword" name="password2">
-      <label for="floatingPassword">確認密碼</label>
+      <label for="floatingPassword">Confirmation password</label>
     </div>
 
-    <button type="submit" class="btn btn-primary mb-5" name="login">註冊</button>
+    <button type="submit" class="btn btn-primary mb-5" name="login">Register</button>
 
-    <p>已經有帳號了?</p>
-    <a href="{% url 'login_page' %}">登入</a>
+    <p>Already have an account?</p>
+    <a href="{% url 'login_page' %}">Login</a>
   </form>
 </div>
 {% endif %}

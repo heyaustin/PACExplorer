@@ -17,7 +17,7 @@ class UserForm(ModelForm):
     class Meta:
         model = User
         fields = ["nickname", "email", "bio"]
-        labels = {"nickname": "暱稱", "email": "電子信箱", "bio": "個人簡介"}
+        labels = {"nickname": "nickname", "email": "email", "bio": "bio"}
         
 class CustomUserCreationForm(UserCreationForm):
     class Meta:

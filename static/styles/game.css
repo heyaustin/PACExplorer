@@ -2,11 +2,11 @@
 
 .home-wrapper {
     width: 100%;
-    margin-top: auto;
     flex-wrap: unset;
+    margin-top: 0;
 }
 
-.btn-left {
+.npc-left {
     flex: 1;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .home-center p {
-    font-size: 1rem;
+    font-size: 1.8em;
 }
 
 .home-center {
@@ -385,6 +385,8 @@ img {
 }
 
 #q3pQA1sn4PlWPBF8 {
+    display: flex;
+    align-items: flex-end;
     grid-area: 25/8/27/2;
     position: relative
 }
@@ -694,6 +696,10 @@ div.game_container {
 
 
 @media (max-width:768px) {
+    .home-center p {
+        font-size: 2.8em;
+    }
+
     #srwUtBkjIZRwbEgf>img {
         transform: translate(-50%, -50%) rotate(0);
     }

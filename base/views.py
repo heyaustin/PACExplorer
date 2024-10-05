@@ -61,7 +61,7 @@ def pop_login_suc(request):
     try:
         user = User.objects.get(email=email)
     except:
-        messages.error(request, "帳號不存在")
+        messages.error(request, "Account does not exist")
         return False  # error
         # return render(request, "base/login_register.html", context)
 
@@ -495,7 +495,6 @@ def login_settings(request):
         return HttpResponse("登入過程中發生錯誤")
 
 
-@login_required(login_url="login_page")
 def videoqa(request, index):
     video_qa_len = len(video_qa.objects.all())
     user = get_object_or_404(User, id=request.user.id)
@@ -644,12 +643,6 @@ def save_rpg_data(request):
 
 def developing(request):
     return render(request, "base/developing.html")
-
-
-def ntuaigform(request):
-    return render(request, "base/iframe.html", {
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSed7zxmFXGDDXhlINBu0atk6G3hVArPGr6YrxmrSVVRILKMBA/viewform"
-    })
 
 
 @login_required(login_url="login_page")

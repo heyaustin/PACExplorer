@@ -1,53 +1,64 @@
 {% load static %}
 {% if page == 'login' or page == 'home' %}
   {% load socialaccount %}
-
   <div class="{{ div_container }} d-flex justify-content-center">
     {% if request.user.is_authenticated %}
       <a class="btn btn-primary" href="{% url 'logout_user' %}" role="button">登出</a>
     {% else %}
       <form class="login_form mt-3" method="POST" action="">
         {% csrf_token %}
-
         {% if page == 'login' %}
           {% if messages %}
             {% include 'base/messages.html' %}
           {% endif %}
         {% endif %}
-
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" />
-          <label for="floatingInput">Email(電子郵件)</label>
+          <input type="email"
+                 class="form-control"
+                 id="floatingInput"
+                 placeholder="name@example.com"
+                 name="email" />
+          <label for="floatingInput">
+            Email
+          </label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" />
-          <label for="floatingPassword">密碼</label>
+          <input type="password"
+                 class="form-control"
+                 id="floatingPassword"
+                 placeholder="Password"
+                 name="password" />
+          <label for="floatingPassword">
+            Password
+          </label>
         </div>
-
         <div class="mt-3 mb-3 form-check">
-          <input type="checkbox" class="checkbox" id="exampleCheck1"/>
-          <label class="form-check-label" for="exampleCheck1" name="remember_login">記住帳號</label>
+          <input type="checkbox" class="checkbox" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1" name="remember_login">
+            Remember my account
+          </label>
         </div>
         <div class="loginbtn_wrap">
           <button type="submit" class="btn btn-primary" name="login">
             <i class="fa-solid fa-right-to-bracket"></i>
-            登入
+            Login
           </button>
           <a href="{% provider_login_url 'line' %}" class="btn btn-success">
             <i class="fa-brands fa-line"></i>
-            Line登入
+            Line Login
           </a>
           {% comment %} <a href="{% provider_login_url 'google' %}" class="btn btn-outline-info">
             <i class="fa-brands fa-google"></i>
-            Google登入
+            Google Login
           </a> {% endcomment %}
         </div>
-
         <div class="loginbtn_wrap mt-5">
-          <p>沒有帳號?</p>
+          <p>
+            No account?
+          </p>
           <a class="btn btn-primary" href="{% url 'register_page' %}">
             <i class="fa-solid fa-registered"></i>
-            註冊
+            Register
           </a>
         </div>
       </form>

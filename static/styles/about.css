@@ -19,19 +19,11 @@ body {
     flex: 3;
 }
 
-.minw300 {
-    min-width: 300px !important;
+.flex4 {
+    flex: 4 !important;
 }
 
-.minw100{
-    min-width: 100px !important;
-}
-
-.flex4{
-   flex: 4 !important;
-}
-
-.demo_map{
+.demo_map {
     object-fit: contain;
     max-width: 300px;
     flex: 1;
@@ -39,22 +31,6 @@ body {
 
 .home-left {
     padding: 2em;
-}
-
-.group {
-    margin-bottom: 0;
-}
-
-.btn-left {
-    flex: 1;
-    min-width: 300px;
-    height: fit-content;
-
-    display: flex;
-    flex-direction: column;
-
-    padding: 15px;
-    margin-bottom: 20px;
 }
 
 .about_container {
