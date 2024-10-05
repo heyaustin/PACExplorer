@@ -1,0 +1,94 @@
+.flipbook-viewport {
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  height: 80vh;
+  /* 設置高度為視窗高度 */
+  padding-top: 6vh;
+}
+
+.flipbook {
+  width: 80vw;
+  /* 書籍寬度設為視窗寬度的80% */
+  height: auto;
+  /* 高度自動 */
+  position: relative;
+}
+
+.odd {
+  background-image: url("../images/book_page2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.even {
+  background-image: url("../images/book_page1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+.page-footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+@media (min-width: 768px) {
+  .video_frame {
+    margin-top: 14vh;
+  }
+
+  .image {
+    max-width: 10%;
+    height: auto;
+  }
+
+  .image2 {
+    position: absolute;
+    bottom: 0vh;
+    right: 0vw;
+    max-width: 6%;
+    height: auto;
+  }
+
+  .questions {
+    margin-top: 30vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .video_frame {
+    margin-top: 20vh;
+  }
+
+  body {
+    font-size: 60%;
+  }
+
+  .image {
+    max-width: 25%;
+    height: auto;
+  }
+
+  .image2 {
+    position: absolute;
+    bottom: 0vh;
+    right: 0vw;
+    max-width: 25%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 5.5vw;
+  }
+
+  .button {
+    width: 33vw;
+    font-size: 50%;
+  }
+}

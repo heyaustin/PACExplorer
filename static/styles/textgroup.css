@@ -1,0 +1,63 @@
+.home-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.home-left {
+    flex: 1;
+    min-width: 300px;
+    height: fit-content;
+
+    background: white;
+    box-shadow: 0 2px 5px 0 var(--shadow);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.group label i {
+    width: 38px;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px 0 var(--shadow);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.group label a {
+    font-size: 16px;
+}
+
+.home-center,
+.home-center .createPost {
+    box-shadow: 0 2px 5px 0 var(--shadow);
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 40px;
+
+    background: white;
+    min-width: 350px;
+    flex: 3;
+}

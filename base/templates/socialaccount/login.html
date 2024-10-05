@@ -1,0 +1,16 @@
+{% extends 'socialaccount/base.html' %}
+
+{% block content %}
+  <div class="div_container">
+    <form method="post">
+      {% csrf_token %}
+      <h1>正在導向中</h1>
+      <button type="submit" class="btn btn-success" id="submitButton" hidden>確定</button>
+    </form>
+  </div>
+  <script>
+    window.onload = function () {
+      document.getElementById('submitButton').click()
+    }
+  </script>
+{% endblock %}

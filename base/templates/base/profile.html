@@ -1,0 +1,59 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/profile.css' %}">
+{% endblock extra_head %}
+
+{% block content %}
+
+<div class="profile_container mt-5">
+    <!-- <img src="{{user.avatar.url}}" alt="" style="width: 5%;"> -->
+    <div class="profile_left">
+        {% if request.user.is_superuser %}
+        <div class="alert alert-info" role="alert">
+            你擁有管理員權限
+        </div>
+        {% endif %}
+
+        {% if user.email != '' %}
+        <h2 class="ml-15">{{user.nickname}}</h1>
+            {% else %}
+            <h2 class="ml-15">{{ user.socialaccount_set.all.0.get_provider_account }}</h1>
+                {% endif %}
+
+                {% if user.is_authenticated %}
+                {% if request.user.id == user.id %}
+                <a href="{% url 'edit_profile' request.user.id %}"
+                    class="btn btn-warning btn-sm ml-15">編輯個人檔案</a>
+                <a href="{% url 'delete_data' request.user.id %}" onclick="javascript:delete_data();"
+                    class="btn btn-danger btn-sm ml-15">刪除資料</a>
+                {% endif %}
+                {% endif %}
+                <hr>
+                <!-- <h3 class="ml-15">個人簡介</h3> -->
+                <h5 class="ml-15 bio p-3">{{ user.bio|default:"這位使用者還沒有個人簡介" }}</h5>
+    </div>
+
+    <div class="profile_right">
+
+    </div>
+</div>
+
+<div class="profile_post ml-15">
+    <h3>我的文章</h3>
+    <br>
+    {% include "base/room_feed_component.html" %}
+</div>
+
+{% endblock content %}
+
+
+{% block extraScript %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+{% endblock extraScript %}

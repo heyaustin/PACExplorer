@@ -1,0 +1,67 @@
+html,
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: #000;
+    /* Black background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.version-text {
+    color: #fff;
+    /* White color for visibility */
+    font-size: 1em;
+    /* Adjust size as needed */
+    margin-top: 5px;
+    /* Space between the title and version text */
+}
+
+.swal2-confirm {
+    width: 40%;
+    /* 設置按鈕寬度 */
+    height: 90%;
+    /* 設置按鈕高度 */
+    font-size: 20px;
+    /* 可選，調整字體大小 */
+}
+
+.swal2-popup .swal2-styled:focus {
+    box-shadow: none !important;
+}
+
+h1 {
+    color: #fff;
+    /* White color for visibility */
+    margin: 0;
+    padding-top: 10px;
+    /* Padding at the top */
+    width: 100%;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+canvas {
+    min-width: 350px;
+    width: 100%;
+}
+
+.rpg_container {
+    max-width: 100%;
+    gap: 2em;
+    overflow-y: auto;
+}

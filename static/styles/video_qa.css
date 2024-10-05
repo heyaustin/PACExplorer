@@ -1,0 +1,44 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    background-image: url("../images/video_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.swal2-popup .swal2-styled:focus {
+    box-shadow: none !important;
+}
+
+.main-content .row {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.offcanvas{
+    max-width: 60% !important;
+}
+
+.send_image img {
+    height: 100%;
+    /* 圖片會占滿整個容器的高度 */
+    width: 90%;
+    /* 保持圖片比例 */
+}
+
+.swal2-confirm {
+    width: 40%;
+    /* 設置按鈕寬度 */
+    height: 90%;
+    /* 設置按鈕高度 */
+    font-size: 20px;
+    /* 可選，調整字體大小 */
+}
+
+body {
+    padding-top: 2%;
+    /* 調整這個值以適應您的導航列高度 */
+}

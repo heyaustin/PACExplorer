@@ -1,0 +1,67 @@
+{% load static %}
+{% block extra_head %}
+  <link rel="stylesheet"
+        type="text/css"
+        href="{% static 'styles/nav_home.css' %}" />
+{% endblock %}
+<nav class="navbar navbar-expand-md">
+  <div class="container-fluid">
+    {% comment %} <a class="navbar-brand" href="/">PACExplorer</a> {% endcomment %}
+    {% comment %} <button onclick="play_select();" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <p>
+        Menu
+      </p>
+    </button> {% endcomment %}
+    <div class="expand navbar-expand navbar-collapse"
+         id="navbarSupportedContent">
+      {% comment %}class="collapse navbar-collapse"{% endcomment %}
+      <ul class="navbar-nav flex-wrap me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          {% comment %} <img src="{% static 'images/login/intro_btn.svg' %}" alt="intro_btn" /> {% endcomment %}
+          <a class="nav-link active"
+             aria-current="page"
+             href="{% url 'about_us' %}">About Us</a>
+        </li>
+        {% comment %} <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'about_game' %}">遊戲介紹</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'form' %}">報名表單</a>
+        </li> {% endcomment %}
+        {% comment %} <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="https://www.surveycake.com/s/4ZO97" target="_blank">回饋表單</a>
+        </li> {% endcomment %}
+        {% comment %} <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="https://corporate.fetnet.net/content/corp/tw/join-us.html" target="_blank" rel="noopener noreferrer">履歷投遞</a>
+        </li> {% endcomment %}
+        <li class="nav-item">
+          <a class="nav-link"
+             href="https://github.com/heyaustin/PACExplorer"
+             target="_blank"
+             rel="noopener noreferrer">GitHub</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             href="https://science.nasa.gov/mission/pace/"
+             target="_blank"
+             rel="noopener noreferrer">PACE</a>
+        </li>
+        {% comment %} {% if request.user.is_authenticated %}
+        {% endif %} {% endcomment %}
+      </ul>
+      {% comment %}
+      <form class="d-inline-flex align-items-center" style="margin-bottom: 0" role="search" method="get" action="/{{ search_setting }}">
+        <input class="form-inline me-2" type="search" placeholder="Search" aria-label="Search" name="q" />
+        <button class="btn btn-success me-3" type="submit">搜索</button>
+      </form>
+      {% endcomment %}
+      {% comment %}
+      {% if request.user.is_authenticated %}
+        <a class="btn btn-primary" href="{% url 'logout_user' %}" role="button">登出</a>
+      {% else %}
+        <a class="btn btn-primary" href="{% url 'login_page' %}" role="button">登入</a>
+      {% endif %}
+      {% endcomment %}
+    </div>
+  </div>
+</nav>

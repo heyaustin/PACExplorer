@@ -1,0 +1,53 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    background-image: url("/static/images/vresult_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+h2 {
+    text-align: center;
+}
+
+tbody {
+    display: block;
+    height: 100%;
+    overflow: auto;
+}
+
+thead,
+tbody tr {
+    display: table;
+    width: 100%;
+}
+
+body {
+    height: 100dvh;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.prel {
+    position: relative !important;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    height: 50dvh;
+    max-width: 900px !important;
+}
+
+.back2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 22% !important;
+    max-width: 8em !important;
+}

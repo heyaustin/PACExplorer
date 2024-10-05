@@ -1,0 +1,17 @@
+{% extends "main.html" %} {% block content %}
+<div class="div_container"></div>
+{% endblock content %} {% block extraScript %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  Swal.fire({
+    title: "{{ title }}",
+    text: "{{ text }}",
+    icon: "success",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "{% url 'home_page' %}";
+    }
+  });
+</script>
+{% endblock extraScript %}

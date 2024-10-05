@@ -1,0 +1,49 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+{% if page == "login" %}
+{% load socialaccount %}
+
+{% include "base/pop_login.html" %}
+
+{% else %}
+<div class="register_wrap d-flex justify-content-center mt-5">
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+        {{ message }}
+        </li>
+        {% endfor %}
+    </ul>
+  {% endif %}
+  
+  <form class="login_form mt-3" method="POST" action="">
+    {% csrf_token %}
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" name="nickname">
+      <label for="floatingInput">使用者暱稱</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput" name="email">
+      <label for="floatingInput">Email(電子郵件)</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingPassword" name="password1">
+      <label for="floatingPassword">密碼</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingPassword" name="password2">
+      <label for="floatingPassword">確認密碼</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-5" name="login">註冊</button>
+
+    <p>已經有帳號了?</p>
+    <a href="{% url 'login_page' %}">登入</a>
+  </form>
+</div>
+{% endif %}
+
+{% endblock content %}

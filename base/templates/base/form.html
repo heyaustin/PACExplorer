@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'styles/about.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles/btn_eos.css' %}" />
+{% endblock %}
+{% block content %}
+  <div class="container mb-5 mt-5">
+    <div class="home-wrapper">
+      <div class="btn-left">
+        <div class="group">
+          <a class="btn button btn-info" href="{% url 'home_page' %}"><span>Home</span></a>
+        </div>
+      </div>
+      {% comment %}
+<div class="vid-center">
+<div class="home-center-wrapper">
+<div class="container">
+</div>
+</div>
+</div>
+      {% endcomment %}
+    </div>
+    <div class="home-wrapper">
+      <div class="home-center">
+        <div class="home-center-wrapper">
+          <div class="container">
+            <p>
+              PACE Explorer
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block extraScript %}
+{% endblock %}
