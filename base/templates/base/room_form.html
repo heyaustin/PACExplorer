@@ -10,10 +10,8 @@
             <p>you have magical superuser power</p>
             {% endif %}
 
-            <label for="room_topic" class="room_topic">討論串標籤</label>
-
+            <label for="room_topic" class="room_topic">Discussion labels</label>
             {# 超級帳號可以直接以此創建標籤 #}
-
 
             {# 超級帳號可以直接以此創建房間標籤 #}
             {% if superuser_auth %}
@@ -51,7 +49,7 @@
         </div>
 
         <div>
-            <label for="room_name">討論串名稱</label>
+            <label for="room_name">Discussion name</label>
             {% comment "form.name可以理解為以下的input" %}
             <input type="text" name="name" value="該房間名稱" maxlength="50" required id="id_name">
             {% endcomment %}
@@ -59,15 +57,15 @@
         </div>
 
         <div>
-            <label for="room_description">討論串描述</label>
+            <label for="room_description">Discussion details</label>
             <div>
                 <br>
-                <small>內容: </small>
+                <small>Content: </small>
                 {{form.description}}
             </div>
         </div>
 
-        <input type="submit" class="btn btn-primary room_submit" value="提交">
+        <input type="submit" class="btn btn-primary room_submit" value="Submit">
 
     </form>
 </div>

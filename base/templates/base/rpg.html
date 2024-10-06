@@ -4,7 +4,6 @@
   <link rel="stylesheet" href="{% static 'styles/rpg.css' %}" />
   <meta name="csrf-token" content="{{ csrf_token }}">
 {% endblock %}
-
 {% block content %}
   <div class="rpg_container row flex-wrap mt-3">
     <div class="tran_btn22">
@@ -14,31 +13,36 @@
     </div>
     <div class="col" id="game-container">
       <!-- Game title -->
-      <h1>FET RPG</h1>
+      <h1>
+        FET RPG
+      </h1>
       <!-- Version text -->
-      <p class="version-text">Beta v. 1.0</p>
+      <p class="version-text">
+        Beta v. 1.0
+      </p>
       <!-- Your game's canvas or additional content goes here -->
     </div>
   </div>
 {% endblock %}
-
 {% block extraScript %}
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
-    Swal.fire({
-        title: 'RPG遊玩方式',
-        icon: 'info',
-        imageHeight: 156,
-        imageWidth: 173,
-        html: '<p style="font-size:1.5em">目前本RPG遊戲只支援電腦版喔！</p><p style="font-size:1.5em">按Enter鍵後在對話框問答</p>',
-        confirmButtonText: '<img src="/static/images/send_success.png" alt="Confirm">',
-        confirmButtonColor: 'transparent',
-        customClass: {
-          confirmButton: 'confirm_button'
-        }
-    })
+      Swal.fire({
+          title: 'RPG遊玩方式',
+          icon: 'info',
+          imageHeight: 156,
+          imageWidth: 173,
+          html: '<p style="font-size:1.5em">目前本RPG遊戲只支援電腦版喔！</p><p style="font-size:1.5em">按Enter鍵後在對話框問答</p>',
+          confirmButtonText: '<img src="/static/images/send_success.png" alt="Confirm">',
+          confirmButtonColor: 'transparent',
+          customClass: {
+              confirmButton: 'confirm_button'
+          }
+      })
   </script>
-  {% comment %} <script>import * as Phaser from 'https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.esm.js';</script> {% endcomment %}
+  {% comment %} <script>
+     import * as Phaser from 'https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.esm.js';
+ </script> {% endcomment %}
   {% comment %}https://phaser.discourse.group/t/how-to-import-phaser-correctly-in-html/9642/10{% endcomment %}
   {% comment %} <script src="https://unpkg.com/es-module-shims@1.7.3/dist/es-module-shims.js"></script> {% endcomment %}
   <script type="module" src="{% static 'rpg/scripts/main.js' %}"></script>

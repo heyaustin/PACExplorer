@@ -1,40 +1,42 @@
 {% extends 'main.html' %}
 {% load static %}
-
 {% block extra_head %}
   <link rel="stylesheet" href="{% static 'styles/btn_eos.css' %}" />
   <style>
-    body {    
-      background-image: url('../static/images/developing_bg.svg');
-      /* https://media.istockphoto.com/id/1481308340/video/swimming-pool.jpg?b=1&s=640x640&k=20&c=U_nXpEsoONq9Hkyp5hqa3fc7q9AEzeg2yaCCseC_AyU= */
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    
-    .dev_container {
-      display: flex;
-      flex-direction: column;
-      gap: 5em;
-      padding: 5em;
-      min-height: 100dvh;
-    }
-    
-    .dev_container > a {
-      z-index: 2;
-    }
+      body {
+          background-image: url('../static/images/login/map_bg.jpg');
+          /* https://media.istockphoto.com/id/1481308340/video/swimming-pool.jpg?b=1&s=640x640&k=20&c=U_nXpEsoONq9Hkyp5hqa3fc7q9AEzeg2yaCCseC_AyU= */
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+      }
+
+      .dev_container {
+          display: flex;
+          flex-direction: column;
+          gap: 5em;
+          padding: 5em;
+          min-height: 100dvh;
+      }
+
+      .dev_container>a {
+          z-index: 2;
+      }
   </style>
 {% endblock %}
-
 {% block content %}
   <div class="dev_container d-flex justify-content-center align-items-center">
-    <img class="developing" src="{% static 'images/developing.svg' %}" />
+    <h1 style="color:#EE4B2B; background:white; padding: 1em">
+      <b>Under Development</b>
+    </h1>
     <a href="{% url 'home_page' %}">
-        <img src="{% static 'images/back.png' %}" alt="Home" />
+      <div class="group">
+        <a class="btn button btn-info" href="{% url 'home_page' %}">
+          <span>Home</span>
+        </a>
+      </div>
     </a>
   </div>
 {% endblock %}
-
 {% block extraScript %}
-
 {% endblock %}

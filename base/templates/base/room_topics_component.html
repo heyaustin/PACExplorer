@@ -3,14 +3,11 @@
     <i class="fa-solid fa-tag fa-lg" style="color: #005eff;"></i>
     <a href="{% url 'chatroom_home' %}">All</a>
 </label>
-
 <br>
-
 {% for topic in topics %}
-<label>
-    <i class="fa-solid fa-tag fa-lg" style="color: #005eff;"></i>
-    <a href="{% url 'chatroom_home' %}?topic_category={{topic.name}}">{{topic.name}}</a>
-</label>
-
-<br>
+    <label>
+        <i class="fa-solid fa-tag fa-lg" style="color: #005eff;"></i>
+        <a href="{% url 'chatroom_home' %}?topic_category={{ topic.name }}">{{ topic.name }}</a>
+    </label>
+    <br>
 {% endfor %}

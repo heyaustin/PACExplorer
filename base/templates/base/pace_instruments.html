@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'styles/slideshow.css' %}" />
+{% endblock %}
+{% block content %}
+    <div class="super-container">
+        <div class="slideshow-container">
+            {% comment %} Full-width images with number and caption text {% endcomment %}
+            <div class="mySlides fde">
+                <div class="numbertext">
+                    1 / 3
+                </div>
+                <img src="{% static 'images/First_Spring_Bloom.png' %}"
+                     alt="PACE_OCI_2024040820240408_PACEs_First_Spring_Bloom_SM.png">
+                <div class="text">
+                    PACE Instruments
+                </div>
+            </div>
+            <div class="mySlides fde">
+                <div class="numbertext">
+                    2 / 3
+                </div>
+                <img src="{% static 'images/TibetanLakes.jpg' %}"
+                     alt="SEAHAWK1_HAWKEYE.20210823T042843.TibetanLakes.crop.jpg">
+                <div class="text">
+                    TibetanLakes
+                </div>
+            </div>
+            <div class="mySlides fde">
+                <div class="numbertext">
+                    3 / 3
+                </div>
+                <img src="{% static 'images/rio_grande.png' %}"
+                     alt="LC09_L1TP_221081-3_20231005_20231005_02_T1_rio_grande_sm.png">
+                <div class="text">
+                    Rio Grande
+                </div>
+            </div>
+            {% comment %} Next and previous buttons {% endcomment %}
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        {% comment %} The dots/circles {% endcomment %}
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+{% endblock content %}
+{% block extraScript %}
+    <script src="{% static 'scripts/slideshow.js' %}"></script>
+{% endblock extraScript %}
