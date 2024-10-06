@@ -1,18 +1,35 @@
 /* @import url('./font-face.css'); */
 
+.mySlides p {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.prev,
+.next {
+    padding: 6px 12px;
+}
+
 .home-wrapper {
     width: 100%;
     flex-wrap: unset;
     margin-top: 0;
 }
 
+.icon-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    bottom: unset;
+    right: unset;
+}
+
 .npc-left {
     flex: 1;
 }
 
-.home-center {
+/* .home-center {
     flex: 2;
-}
+} */
 
 .home-center p {
     font-size: 1.8em;
@@ -387,7 +404,7 @@ img {
 #q3pQA1sn4PlWPBF8 {
     display: flex;
     align-items: flex-end;
-    grid-area: 25/8/27/2;
+    grid-area: 25/15/28/1;
     position: relative
 }
 

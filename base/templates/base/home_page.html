@@ -6,6 +6,7 @@
     <meta name="keywords"
           content="PACE, NASA, Plankton, Aerosol, Cloud, Ocean, Ecosystem" />
     <link rel="stylesheet" href="{% static 'styles/textgroup.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/slideshow.css' %}" />
     <link rel="stylesheet"
           type="text/css"
           href="{% static 'styles/game.css' %}" />
@@ -32,6 +33,7 @@
     <audio src="{% static 'rpg/audio/select.mp3' %}" id="play_select"></audio>
 {% endblock %}
 {% block extraScript %}
+    <script src="{% static 'scripts/slideshow.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/00e5774e18.js"
             crossorigin="anonymous"></script>

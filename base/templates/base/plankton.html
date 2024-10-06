@@ -11,37 +11,59 @@
                 <div class="numbertext">
                     1 / 3
                 </div>
-                <img src="{% static 'images/First_Spring_Bloom.png' %}"
-                     alt="PACE_OCI_2024040820240408_PACEs_First_Spring_Bloom_SM.png">
+                <img src="{% static 'images/chaetoceros_socialis.png' %}"
+                     alt="chaetoceros_socialis.png">
                 <div class="text">
-                    Plankton
+                    <h1>
+                        Chaetoceros socialis
+                    </h1>
+                    <h3>
+                        Ahoy, young sailor! Meet Chaetoceros socialis, a tiny sea explorer that lives in groups, helping keep the ocean clean by recycling nutrients. While their cousins have spiky armor that can bother fish, this friendly diatom is usually harmless!
+                    </h3>
                 </div>
             </div>
             <div class="mySlides fde">
                 <div class="numbertext">
                     2 / 3
                 </div>
-                <img src="{% static 'images/TibetanLakes.jpg' %}"
-                     alt="SEAHAWK1_HAWKEYE.20210823T042843.TibetanLakes.crop.jpg">
+                <img src="{% static 'images/rhizosolenia.png' %}" alt="rhizosolenia.png">
                 <div class="text">
-                    TibetanLakes
+                    <h1>
+                        Rhizosolenia
+                    </h1>
+                    <div class="row">
+                        <h3>
+                            Ahoy there, young sailor! Did ye know that <b>Rhizosolenia</b> are tiny sea creatures shaped like the tip of an ink pen? These little wonders can join forces to create floating mats so big, they can be spotted from space!
+                        </h3>
+                        <h3>
+                            What’s even more amazing is they’ve got a secret weapon—<b>cyanobacteria</b>—that helps them bring nutrients from the deep ocean up to the surface, feeding other ocean life. But fear not! These tiny sea friends aren’t dangerous—just helpful explorers of the sea!
+                        </h3>
+                    </div>
                 </div>
             </div>
             <div class="mySlides fde">
                 <div class="numbertext">
                     3 / 3
                 </div>
-                <img src="{% static 'images/rio_grande.png' %}"
-                     alt="LC09_L1TP_221081-3_20231005_20231005_02_T1_rio_grande_sm.png">
+                <img src="{% static 'images/karenia_brevis_1.png' %}"
+                     alt="karenia_brevis_1.png">
+                <img src="{% static 'images/karenia_brevis_2.png' %}"
+                     alt="karenia_brevis_2.png">
                 <div class="text">
-                    Rio Grande
+                    <h1>
+                        Karenia Brevis
+                    </h1>
+                    <h3>
+                        Ahoy, sailor! Beware the tricky <b>Karenia brevis</b>—a tiny critter shaped like an upside-down heart that causes big trouble! It makes a toxin that harms sea creatures and can make humans feel dizzy and tingly if we eat bad shellfish. Watch out for its red tide in the Gulf of Mexico!
+                    </h3>
                 </div>
             </div>
             {% comment %} Next and previous buttons {% endcomment %}
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="icon-wrapper">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
         </div>
-        <br>
         {% comment %} The dots/circles {% endcomment %}
         <div class="dots">
             <span class="dot" onclick="currentSlide(1)"></span>
